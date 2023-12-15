@@ -33,8 +33,9 @@ public class DatabaseService {
                 int eventSize = Integer.parseInt(array.getJSONObject(i).getString("eventSize"));
                 long eventDate = Long.parseLong(array.getJSONObject(i).getString("eventDate"));
                 int participants = Integer.parseInt(array.getJSONObject(i).getString("participants"));
+                int index = i;
 
-                result.add(new Event(eventId, eventName, eventSize, eventDate, participants));
+                result.add(new Event(eventId, eventName, eventSize, eventDate, participants, index));
                 repo.saveRecord(result.get(i));
             }
         }

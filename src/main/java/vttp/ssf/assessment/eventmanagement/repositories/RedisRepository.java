@@ -26,6 +26,10 @@ public class RedisRepository {
 		return size;
 	}
 
+	public Event getEvent(Integer index){
+		Event event = template.opsForValue().get
+	}
+
 	//copy
 
 

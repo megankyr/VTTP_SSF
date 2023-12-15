@@ -7,6 +7,7 @@ public class Event {
     private int eventSize;
     private long eventDate;
     private int participants;
+    private int index;
     
     public Event() {
     }
@@ -16,6 +17,14 @@ public class Event {
         this.eventSize = eventSize;
         this.eventDate = eventDate;
         this.participants = participants;
+    }
+    public Event(int eventId, String eventName, int eventSize, long eventDate, int participants, int index) {
+        this.eventId = eventId;
+        this.eventName = eventName;
+        this.eventSize = eventSize;
+        this.eventDate = eventDate;
+        this.participants = participants;
+        this.index = index;
     }
     public int getEventId() {
         return eventId;
@@ -47,5 +56,11 @@ public class Event {
     public void setParticipants(int participants) {
         this.participants = participants;
     }
+    public int getIndex() {
+        return index;
+    }
+    public void setIndex(int index) {
+        this.index = index;
+    }
+
 }
-    

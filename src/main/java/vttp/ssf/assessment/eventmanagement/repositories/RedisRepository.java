@@ -16,7 +16,8 @@ public class RedisRepository {
 	private RedisTemplate<String, Object> template;
 
 	public void saveRecord(Event event){
-		String key = event.getEventName();
+		int index = event.getIndex();
+		String key = Integer.toString(index);
 		template.opsForValue().set(key, event);
 		
 	}
@@ -27,16 +28,10 @@ public class RedisRepository {
 	}
 
 	public Event getEvent(Integer index){
-		Event event = template.opsForValue().get
+		String key = Integer.toString(index);
+		Event event = (Event) template.opsForValue().get(key);
+		return event;
 	}
 
 	//copy
-
-
-
-
-	// TODO: Task 3
-
-
-	// TODO: Task 4
 }

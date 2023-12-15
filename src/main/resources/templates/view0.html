@@ -25,7 +25,7 @@
           <td data-th-text="*{e.eventSize}"></td>
           <td data-th-text="*{e.eventDate}"></td>
           <td>
-              <a th:href="@{/events/register/2}">Register</a>
+              <a th:href="@{/events/register/{index}(index=${e.index})}">Register</a>
           </td>
       </tr>
   </tbody>

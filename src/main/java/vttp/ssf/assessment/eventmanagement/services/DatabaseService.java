@@ -1,6 +1,5 @@
 package vttp.ssf.assessment.eventmanagement.services;
 
-import java.io.StringReader;
 import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.nio.file.Paths;
@@ -11,8 +10,6 @@ import org.json.JSONArray;
 import org.json.JSONObject;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
-import jakarta.json.Json;
 import vttp.ssf.assessment.eventmanagement.models.Event;
 import vttp.ssf.assessment.eventmanagement.repositories.RedisRepository;
 

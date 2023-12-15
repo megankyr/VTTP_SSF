@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Success</title>
+</head>
+<body>
+    <h2>Success</h2>
+    <h3>You have successfully registered for the event:</h3>
+    <span data-th-text="${eventName}"></span>
+    <span data-th-text="${eventDate}"></span>
+    <form action="/events/listing">
+        <button type="submit">Back to Event Listing</button>
+    </form>
+</body>
+</html>

@@ -8,7 +8,7 @@
 <body>
 
     <h2>Register event</h2>
-    <form method="POST" data-th-object="${user}" data-th-action="@{/events/register/{index}}">
+    <form method="POST" data-th-object="${user}" data-th-action="@{events/register/{index}}">
         <h3>You have chosen to register for the following event:</h3>
         <span data-th-text="${eventName}"></span>
         <span data-th-text="${eventDate}"></span>

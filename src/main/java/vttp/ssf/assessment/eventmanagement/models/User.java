@@ -1,6 +1,7 @@
 package vttp.ssf.assessment.eventmanagement.models;
 
 import java.time.LocalDate;
+import java.time.Period;
 
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.Max;
@@ -66,6 +67,16 @@ public class User {
 
     public void setDob(LocalDate dob) {
         this.dob = dob;
+    }
+
+    public boolean isValidAge() {
+        if (dob == null) {
+            return false;
+        }
+
+        LocalDate now = LocalDate.now();
+        int age = Period.between(dob, now).getYears();
+        return age >= 21;
     }
 
     public String getEmail() {

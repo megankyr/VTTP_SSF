@@ -1,5 +1,6 @@
 package vttp.ssf.assessment.eventmanagement.services;
 
+import java.io.StringReader;
 import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.nio.file.Paths;
@@ -11,6 +12,7 @@ import org.json.JSONObject;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import jakarta.json.Json;
 import vttp.ssf.assessment.eventmanagement.models.Event;
 import vttp.ssf.assessment.eventmanagement.repositories.RedisRepository;
 
@@ -22,6 +24,7 @@ public class DatabaseService {
 
     public List<Event> readFile(String fileName) {
         ArrayList<Event> result = new ArrayList<Event>();
+        fileName = "events.json";
         try {
             String text = new String(Files.readAllBytes(Paths.get(fileName)), StandardCharsets.UTF_8);
             JSONObject object = new JSONObject(text);

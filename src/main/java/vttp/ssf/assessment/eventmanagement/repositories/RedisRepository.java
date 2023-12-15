@@ -33,5 +33,4 @@ public class RedisRepository {
 		return event;
 	}
 
-	//copy
 }
